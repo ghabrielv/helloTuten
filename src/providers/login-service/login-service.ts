@@ -12,8 +12,8 @@ export class LoginServiceProvider {
     return new Promise((resolve, reject) => {
       let apiUrl:string = 'https://dev.tuten.cl:443/TutenREST/rest/';
       let headers = new Headers();
-      headers.append('password', password);
-      headers.append('app', app);
+      headers.append('Password', password);
+      headers.append('App', app);
 
       this.http.put(apiUrl + 'user/' + email, { }, { headers:headers })
         .subscribe(res => {

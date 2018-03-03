@@ -27,7 +27,6 @@ export class LoginPage {
       localStorage.setItem('userData', JSON.stringify(this.responseData));
       this.navCtrl.push(HomePage);
     }, (err) => {
-      alert("Correo electrónico o contraseña incorrecto.");
     });
   }
 
