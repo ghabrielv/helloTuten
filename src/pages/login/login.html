@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Hello Tuten
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
+      <form [formGroup]="LoginForm" (ngSubmit)="login()">
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Correo electrónico:</ion-label>
+            <ion-input [(ngModel)]="userData.email" formControlName="email" type="email" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Contraseña:</ion-label>
+            <ion-input [(ngModel)]="userData.password" formControlName="password" type="password" value=""></ion-input>
+          </ion-item>
+        </ion-list>
+        <div padding>
+          <button primary block type="submit" [disabled]="!LoginForm.valid" ion-button>Iniciar sesión</button>
+        </div>
+      </form>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-content>

@@ -5,10 +5,24 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  Hello Tuten with Ionic
-  <p>
-    Making use of the API, the <a href="https://dev.tuten.cl/TutenREST">TutenREST</a>.
-  </p>
+  <ion-row>
+    <h3>Bienvenido {{userData.firstName}} {{userData.lastName}}, algunos detalles sobre ti:</h3>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item detail-push>
+        Correo electrónico: {{userData.email}}
+      </ion-item>
+      <ion-item detail-push>
+        Número telefónico: {{userData.phoneNumber}}
+      </ion-item>
+      <ion-item detail-push>
+        Último inicio de sesión: {{userData.lastLogin | date:'dd-MM-yyyy HH:mm:ss'}}
+      </ion-item>
+      <button color="danger" ion-button (click)="logout()">Cerrar sesión</button>
+    </ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+  </ion-row>
 </ion-content>
