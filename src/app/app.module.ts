@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 
 import { LoginServiceProvider } from '../providers/login-service/login-service';
+import { BookingServiceProvider } from '../providers/booking-service/booking-service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginServiceProvider } from '../providers/login-service/login-service';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoginServiceProvider
+    LoginServiceProvider,
+    BookingServiceProvider
   ]
 })
 export class AppModule {}
