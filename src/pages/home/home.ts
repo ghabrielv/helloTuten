@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { LoginServiceProvider } from '../../providers/login-service/login-service';
 import { BookingServiceProvider } from '../../providers/booking-service/booking-service';
 
 import { LoginPage } from '../login/login';
