@@ -20,6 +20,9 @@
       <ion-item detail-push>
         Último inicio de sesión: {{userData.lastLogin | date:'dd-MM-yyyy HH:mm:ss'}}
       </ion-item>
+      <ion-item detail-push>
+        Mi sessionTokenBck es: {{userAPI.sessionTokenBck}}
+      </ion-item>
       <button color="danger" ion-button (click)="logout()">Cerrar sesión</button>
     </ion-col>
     <ion-col></ion-col>
