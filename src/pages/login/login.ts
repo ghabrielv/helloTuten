@@ -16,8 +16,8 @@ export class LoginPage {
   LoginForm: FormGroup;
 
   constructor(public navCtrl: NavController, public LoginServiceProvider:LoginServiceProvider, public fb: FormBuilder) {
+    this.obtenerToken();
     if (typeof(localStorage.getItem("userData")) == 'string') {
-      this.obtenerToken();
       this.navCtrl.push(HomePage);
     }
     this.LoginForm = this.createForm();
