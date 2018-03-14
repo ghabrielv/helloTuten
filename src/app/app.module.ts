@@ -11,6 +11,8 @@ import { helloTuten } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 
+import { SearchPipe } from '../pipes/search/search';
+
 import { LoginServiceProvider } from '../providers/login-service/login-service';
 import { BookingServiceProvider } from '../providers/booking-service/booking-service';
 
@@ -18,7 +20,8 @@ import { BookingServiceProvider } from '../providers/booking-service/booking-ser
   declarations: [
     helloTuten,
     LoginPage,
-    HomePage
+    HomePage,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
