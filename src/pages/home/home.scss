@@ -1,3 +1,22 @@
 page-home {
 
 }
+
+.header .col {
+    background-color:lightgrey;
+    font-weight: bold;
+}
+
+.body .col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+.body .col:last-child {
+    border-right: solid 1px grey;
+}
+
+.body .row:last-child .col {
+    border-bottom: solid 1px grey;
+}

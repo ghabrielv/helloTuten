@@ -14,6 +14,7 @@ export class HomePage {
   public userAPI: any;
   public bookingData: any;
   responseData : any;
+  keyword;
 
   constructor(public navCtrl: NavController, public BookingServiceProvider:BookingServiceProvider) {
     this.userData = JSON.parse(localStorage.getItem('userData'));
@@ -31,8 +32,16 @@ export class HomePage {
       this.responseData = result;
       localStorage.setItem('bookingData', JSON.stringify(this.responseData));
       this.bookingData = JSON.parse(localStorage.getItem('bookingData'));
+      console.log(typeof this.bookingData[0].bookingId);
     }, (err) => {
     });
+  }
+
+  setFilter(searchTerm = 1066) {
+    console.log( this.bookingData.filter((book) => {
+      return book.bookingId == 1066 > -1;
+    }));
+    
   }
 
 }
