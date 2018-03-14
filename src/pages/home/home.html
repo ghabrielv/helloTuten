@@ -29,7 +29,7 @@
     <ion-col></ion-col>
   </ion-row>
   <h2>Bookings</h2>
-  <ion-searchbar [(ngModel)]="searchBoookingId" (ionInput)="setFilter()" placeholder="Introducir BookingId"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="terms" placeholder="Introducir BookingId"></ion-searchbar>
   <div class="row header">
       <div class="col">BookingId</div>
       <div class="col">Cliente</div>
@@ -37,7 +37,7 @@
       <div class="col">Dirección</div>
       <div class="col">Precio</div>
     </div>
-    <div class="row body" *ngFor="let book of bookingData">
+    <div class="row body" *ngFor="let book of bookingData | search : terms">
       <div class="col">{{book.bookingId}}</div>
       <div class="col">{{book.tutenUserClient.firstName}} {{book.tutenUserClient.lastName}}</div>
       <div class="col">{{book.bookingTime}}</div>
